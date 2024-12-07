@@ -9,7 +9,7 @@ https://finance.sina.com.cn/realstock/company/klc_td_sh.txt
 import datetime
 import pandas as pd
 import requests
-from py_mini_racer import py_mini_racer
+import py_mini_racer
 
 hk_js_decode = """
 function d(t) {

@@ -1,9 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-#export PYTHONPATH=/data/InStock
+RUNTIME_ENV=$(conda info | grep "active environment" | awk '{print $NF}')
+PROJECT_PATH=$(pwd)/..
+JOB_PATH=${PROJECT_PATH}/job
 
-#nohup  &
-/usr/local/bin/python3 /data/InStock/instock/job/execute_daily_job.py
+if [[ ${RUNTIME_ENV} != "mstock" ]]; then
+    conda activate mstock
+fi
+
+python3 ${JOB_PATH}/execute_daily_job.py
 
 echo ------整体作业 支持批量作业------
 echo 当前时间作业 python execute_daily_job.py

@@ -1,14 +1,7 @@
-# -*- coding:utf-8 -*-
-# !/usr/bin/env python
-
 import math
 import pandas as pd
 import requests
 import instock.core.tablestructure as tbs
-
-__author__ = 'myh '
-__date__ = '2023/5/9 '
-
 
 def stock_selection() -> pd.DataFrame:
     """
