@@ -53,6 +53,7 @@ def main():
     # 检查，如果执行 select 1 失败，说明数据库不存在，然后创建一个新的数据库。
     try:
         check_database()
+        create_new_base_table()
     except Exception as e:
         logging.error("执行信息：数据库不存在，将创建。")
         # 检查数据库失败，
